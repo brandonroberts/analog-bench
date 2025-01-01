@@ -14,7 +14,7 @@ if (!fs.existsSync(componentsDir)) {
 }
 
 const total = 1001;
-// Generate 100 components
+// Generate {n} components
 for (let i = 1; i <= total; i++) {
   const componentContent = `
 import { Component, signal } from '@angular/core';

@@ -13,8 +13,9 @@ if (!fs.existsSync(componentsDir)) {
   fs.mkdirSync(componentsDir, { recursive: true });
 }
 
-// Generate 100 components
-for (let i = 1; i <= 100; i++) {
+const total = 1001;
+// Generate {n} components
+for (let i = 1; i <= total; i++) {
   const componentContent = `<script lang="ts">
   import { signal } from '@angular/core';
 
@@ -52,17 +53,17 @@ for (let i = 1; i <= 100; i++) {
 
 // Create a new index page that uses all components
 const pageContent = `<script lang="ts">
-${Array.from({ length: 100 }, (_, i) => i + 1)
-  .map(
-    (i) => `import BenchmarkAg${i} from '../components/ag/benchmark-ag-${i}.ag'`
-  )
-  .join(';\n')};
+${Array.from({ length: total }, (_, i) => i + 1)
+    .map(
+      (i) => `import BenchmarkAg${i} from '../components/ag/benchmark-ag-${i}.ag'`
+    )
+    .join(';\n')};
 
   defineMetadata({
   imports: [
-    ${Array.from({ length: 100 }, (_, i) => i + 1)
-      .map((i) => `BenchmarkAg${i}`)
-      .join(',\n')}
+    ${Array.from({ length: total }, (_, i) => i + 1)
+    .map((i) => `BenchmarkAg${i}`)
+    .join(',\n')}
   ]
 });
 </script>
@@ -71,9 +72,9 @@ ${Array.from({ length: 100 }, (_, i) => i + 1)
   <div class="benchmark-container">
     <h1>Benchmark Page</h1>
     <div class="components-grid">
-      ${Array.from({ length: 100 }, (_, i) => i + 1)
-        .map((i) => `<BenchmarkAg${i} />`)
-        .join('\n      ')}
+      ${Array.from({ length: total }, (_, i) => i + 1)
+    .map((i) => `<BenchmarkAg${i} />`)
+    .join('\n      ')}
     </div>
   </div>
 </template>
@@ -96,4 +97,4 @@ ${Array.from({ length: 100 }, (_, i) => i + 1)
 const pagesDir = path.join(process.cwd(), 'src', 'app', 'pages');
 fs.writeFileSync(path.join(pagesDir, 'benchmarkag.page.ag'), pageContent);
 
-console.log('Generated 100 benchmark AG components and benchmark page');
+console.log(`Generated ${total} benchmark AG components and benchmark page`);
