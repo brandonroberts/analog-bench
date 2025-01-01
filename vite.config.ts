@@ -1,11 +1,11 @@
 /// <reference types="vitest" />
 
-import analog from '@analogjs/platform';
+import angular from '@analogjs/vite-plugin-angular';
 import { defineConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   build: {
     target: ['es2020'],
   },
@@ -13,8 +13,8 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
-    analog({ vite: { experimental: { supportAnalogFormat: true } } }),
-    Inspect({
+    angular(),
+    !isSsrBuild && Inspect({
       build: true,
       outputDir: '.vite-inspect',
     }),

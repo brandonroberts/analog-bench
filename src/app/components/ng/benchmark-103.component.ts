@@ -1,0 +1,28 @@
+
+import { Component, signal } from '@angular/core';
+
+  @Component({
+    selector: 'benchmark-ng-103',
+    template: `<div class="benchmark-component">
+    <h3>Component 103</h3>
+    <button type="button" (click)="increment103()">
+      Count {{ count103() }}
+    </button>
+  </div>`,
+  styles: `
+  .benchmark-component {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+  `,
+    standalone: true,
+  })
+  export class BenchmarkNg103 {
+    count103 = signal(0);
+
+    increment103() {
+      this.count103.update((count) => count + 1);
+    }
+  }

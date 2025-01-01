@@ -13,8 +13,9 @@ if (!fs.existsSync(componentsDir)) {
   fs.mkdirSync(componentsDir, { recursive: true });
 }
 
+const total = 1001;
 // Generate 100 components
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= total; i++) {
   const componentContent = `
 import { Component, signal } from '@angular/core';
 
@@ -51,50 +52,38 @@ import { Component, signal } from '@angular/core';
 }
 
 // Create a new index page that uses all components
-const pageContent = `<script lang="ts">
-${Array.from({ length: 100 }, (_, i) => i + 1)
-  .map(
-    (i) =>
-      `import { BenchmarkNg${i} } from '../components/ng/benchmark-${i}.component'`
-  )
-  .join(';\n')};
+const pageContent = `
+import { Component } from '@angular/core';
 
-  defineMetadata({
+
+${Array.from({ length: total }, (_, i) => i + 1)
+    .map(
+      (i) =>
+        `import { BenchmarkNg${i} } from '../components/ng/benchmark-${i}.component'`
+    )
+    .join(';\n')};
+
+@Component({
   imports: [
-    ${Array.from({ length: 100 }, (_, i) => i + 1)
-      .map((i) => `BenchmarkNg${i}`)
-      .join(',\n')}
-  ]
-});
-</script>
-
-<template>
-  <div class="benchmark-container">
+    ${Array.from({ length: total }, (_, i) => i + 1)
+    .map((i) => `BenchmarkNg${i}`)
+    .join(',\n')}
+  ],
+  template: \`<div class="benchmark-container">
     <h1>Benchmark Page</h1>
     <div class="components-grid">
-      ${Array.from({ length: 100 }, (_, i) => i + 1)
-        .map((i) => `<benchmark-ng-${i} />`)
-        .join('\n      ')}
+      ${Array.from({ length: total }, (_, i) => i + 1)
+    .map((i) => `<benchmark-ng-${i} />`)
+    .join('\n      ')}
     </div>
   </div>
-</template>
-
-<style>
-  .benchmark-container {
-    padding: 2rem;
-  }
-
-  .components-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-  }
-</style>
+\`
+  })
+export default class BenchmarkPage {}
 `;
 
 // Create the benchmark page
 const pagesDir = path.join(process.cwd(), 'src', 'app', 'pages');
-fs.writeFileSync(path.join(pagesDir, 'benchmarkng.page.ag'), pageContent);
+fs.writeFileSync(path.join(pagesDir, 'benchmarkng.page.ts'), pageContent);
 
-console.log('Generated 100 benchmark NG components and benchmark page');
+console.log(`Generated ${total} benchmark NG components and benchmark page`);
