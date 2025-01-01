@@ -1,0 +1,328 @@
+<script lang="ts">
+import BenchmarkAg1 from '../components/ag/benchmark-ag-1.ag';
+import BenchmarkAg2 from '../components/ag/benchmark-ag-2.ag';
+import BenchmarkAg3 from '../components/ag/benchmark-ag-3.ag';
+import BenchmarkAg4 from '../components/ag/benchmark-ag-4.ag';
+import BenchmarkAg5 from '../components/ag/benchmark-ag-5.ag';
+import BenchmarkAg6 from '../components/ag/benchmark-ag-6.ag';
+import BenchmarkAg7 from '../components/ag/benchmark-ag-7.ag';
+import BenchmarkAg8 from '../components/ag/benchmark-ag-8.ag';
+import BenchmarkAg9 from '../components/ag/benchmark-ag-9.ag';
+import BenchmarkAg10 from '../components/ag/benchmark-ag-10.ag';
+import BenchmarkAg11 from '../components/ag/benchmark-ag-11.ag';
+import BenchmarkAg12 from '../components/ag/benchmark-ag-12.ag';
+import BenchmarkAg13 from '../components/ag/benchmark-ag-13.ag';
+import BenchmarkAg14 from '../components/ag/benchmark-ag-14.ag';
+import BenchmarkAg15 from '../components/ag/benchmark-ag-15.ag';
+import BenchmarkAg16 from '../components/ag/benchmark-ag-16.ag';
+import BenchmarkAg17 from '../components/ag/benchmark-ag-17.ag';
+import BenchmarkAg18 from '../components/ag/benchmark-ag-18.ag';
+import BenchmarkAg19 from '../components/ag/benchmark-ag-19.ag';
+import BenchmarkAg20 from '../components/ag/benchmark-ag-20.ag';
+import BenchmarkAg21 from '../components/ag/benchmark-ag-21.ag';
+import BenchmarkAg22 from '../components/ag/benchmark-ag-22.ag';
+import BenchmarkAg23 from '../components/ag/benchmark-ag-23.ag';
+import BenchmarkAg24 from '../components/ag/benchmark-ag-24.ag';
+import BenchmarkAg25 from '../components/ag/benchmark-ag-25.ag';
+import BenchmarkAg26 from '../components/ag/benchmark-ag-26.ag';
+import BenchmarkAg27 from '../components/ag/benchmark-ag-27.ag';
+import BenchmarkAg28 from '../components/ag/benchmark-ag-28.ag';
+import BenchmarkAg29 from '../components/ag/benchmark-ag-29.ag';
+import BenchmarkAg30 from '../components/ag/benchmark-ag-30.ag';
+import BenchmarkAg31 from '../components/ag/benchmark-ag-31.ag';
+import BenchmarkAg32 from '../components/ag/benchmark-ag-32.ag';
+import BenchmarkAg33 from '../components/ag/benchmark-ag-33.ag';
+import BenchmarkAg34 from '../components/ag/benchmark-ag-34.ag';
+import BenchmarkAg35 from '../components/ag/benchmark-ag-35.ag';
+import BenchmarkAg36 from '../components/ag/benchmark-ag-36.ag';
+import BenchmarkAg37 from '../components/ag/benchmark-ag-37.ag';
+import BenchmarkAg38 from '../components/ag/benchmark-ag-38.ag';
+import BenchmarkAg39 from '../components/ag/benchmark-ag-39.ag';
+import BenchmarkAg40 from '../components/ag/benchmark-ag-40.ag';
+import BenchmarkAg41 from '../components/ag/benchmark-ag-41.ag';
+import BenchmarkAg42 from '../components/ag/benchmark-ag-42.ag';
+import BenchmarkAg43 from '../components/ag/benchmark-ag-43.ag';
+import BenchmarkAg44 from '../components/ag/benchmark-ag-44.ag';
+import BenchmarkAg45 from '../components/ag/benchmark-ag-45.ag';
+import BenchmarkAg46 from '../components/ag/benchmark-ag-46.ag';
+import BenchmarkAg47 from '../components/ag/benchmark-ag-47.ag';
+import BenchmarkAg48 from '../components/ag/benchmark-ag-48.ag';
+import BenchmarkAg49 from '../components/ag/benchmark-ag-49.ag';
+import BenchmarkAg50 from '../components/ag/benchmark-ag-50.ag';
+import BenchmarkAg51 from '../components/ag/benchmark-ag-51.ag';
+import BenchmarkAg52 from '../components/ag/benchmark-ag-52.ag';
+import BenchmarkAg53 from '../components/ag/benchmark-ag-53.ag';
+import BenchmarkAg54 from '../components/ag/benchmark-ag-54.ag';
+import BenchmarkAg55 from '../components/ag/benchmark-ag-55.ag';
+import BenchmarkAg56 from '../components/ag/benchmark-ag-56.ag';
+import BenchmarkAg57 from '../components/ag/benchmark-ag-57.ag';
+import BenchmarkAg58 from '../components/ag/benchmark-ag-58.ag';
+import BenchmarkAg59 from '../components/ag/benchmark-ag-59.ag';
+import BenchmarkAg60 from '../components/ag/benchmark-ag-60.ag';
+import BenchmarkAg61 from '../components/ag/benchmark-ag-61.ag';
+import BenchmarkAg62 from '../components/ag/benchmark-ag-62.ag';
+import BenchmarkAg63 from '../components/ag/benchmark-ag-63.ag';
+import BenchmarkAg64 from '../components/ag/benchmark-ag-64.ag';
+import BenchmarkAg65 from '../components/ag/benchmark-ag-65.ag';
+import BenchmarkAg66 from '../components/ag/benchmark-ag-66.ag';
+import BenchmarkAg67 from '../components/ag/benchmark-ag-67.ag';
+import BenchmarkAg68 from '../components/ag/benchmark-ag-68.ag';
+import BenchmarkAg69 from '../components/ag/benchmark-ag-69.ag';
+import BenchmarkAg70 from '../components/ag/benchmark-ag-70.ag';
+import BenchmarkAg71 from '../components/ag/benchmark-ag-71.ag';
+import BenchmarkAg72 from '../components/ag/benchmark-ag-72.ag';
+import BenchmarkAg73 from '../components/ag/benchmark-ag-73.ag';
+import BenchmarkAg74 from '../components/ag/benchmark-ag-74.ag';
+import BenchmarkAg75 from '../components/ag/benchmark-ag-75.ag';
+import BenchmarkAg76 from '../components/ag/benchmark-ag-76.ag';
+import BenchmarkAg77 from '../components/ag/benchmark-ag-77.ag';
+import BenchmarkAg78 from '../components/ag/benchmark-ag-78.ag';
+import BenchmarkAg79 from '../components/ag/benchmark-ag-79.ag';
+import BenchmarkAg80 from '../components/ag/benchmark-ag-80.ag';
+import BenchmarkAg81 from '../components/ag/benchmark-ag-81.ag';
+import BenchmarkAg82 from '../components/ag/benchmark-ag-82.ag';
+import BenchmarkAg83 from '../components/ag/benchmark-ag-83.ag';
+import BenchmarkAg84 from '../components/ag/benchmark-ag-84.ag';
+import BenchmarkAg85 from '../components/ag/benchmark-ag-85.ag';
+import BenchmarkAg86 from '../components/ag/benchmark-ag-86.ag';
+import BenchmarkAg87 from '../components/ag/benchmark-ag-87.ag';
+import BenchmarkAg88 from '../components/ag/benchmark-ag-88.ag';
+import BenchmarkAg89 from '../components/ag/benchmark-ag-89.ag';
+import BenchmarkAg90 from '../components/ag/benchmark-ag-90.ag';
+import BenchmarkAg91 from '../components/ag/benchmark-ag-91.ag';
+import BenchmarkAg92 from '../components/ag/benchmark-ag-92.ag';
+import BenchmarkAg93 from '../components/ag/benchmark-ag-93.ag';
+import BenchmarkAg94 from '../components/ag/benchmark-ag-94.ag';
+import BenchmarkAg95 from '../components/ag/benchmark-ag-95.ag';
+import BenchmarkAg96 from '../components/ag/benchmark-ag-96.ag';
+import BenchmarkAg97 from '../components/ag/benchmark-ag-97.ag';
+import BenchmarkAg98 from '../components/ag/benchmark-ag-98.ag';
+import BenchmarkAg99 from '../components/ag/benchmark-ag-99.ag';
+import BenchmarkAg100 from '../components/ag/benchmark-ag-100.ag';
+
+  defineMetadata({
+  imports: [
+    BenchmarkAg1,
+BenchmarkAg2,
+BenchmarkAg3,
+BenchmarkAg4,
+BenchmarkAg5,
+BenchmarkAg6,
+BenchmarkAg7,
+BenchmarkAg8,
+BenchmarkAg9,
+BenchmarkAg10,
+BenchmarkAg11,
+BenchmarkAg12,
+BenchmarkAg13,
+BenchmarkAg14,
+BenchmarkAg15,
+BenchmarkAg16,
+BenchmarkAg17,
+BenchmarkAg18,
+BenchmarkAg19,
+BenchmarkAg20,
+BenchmarkAg21,
+BenchmarkAg22,
+BenchmarkAg23,
+BenchmarkAg24,
+BenchmarkAg25,
+BenchmarkAg26,
+BenchmarkAg27,
+BenchmarkAg28,
+BenchmarkAg29,
+BenchmarkAg30,
+BenchmarkAg31,
+BenchmarkAg32,
+BenchmarkAg33,
+BenchmarkAg34,
+BenchmarkAg35,
+BenchmarkAg36,
+BenchmarkAg37,
+BenchmarkAg38,
+BenchmarkAg39,
+BenchmarkAg40,
+BenchmarkAg41,
+BenchmarkAg42,
+BenchmarkAg43,
+BenchmarkAg44,
+BenchmarkAg45,
+BenchmarkAg46,
+BenchmarkAg47,
+BenchmarkAg48,
+BenchmarkAg49,
+BenchmarkAg50,
+BenchmarkAg51,
+BenchmarkAg52,
+BenchmarkAg53,
+BenchmarkAg54,
+BenchmarkAg55,
+BenchmarkAg56,
+BenchmarkAg57,
+BenchmarkAg58,
+BenchmarkAg59,
+BenchmarkAg60,
+BenchmarkAg61,
+BenchmarkAg62,
+BenchmarkAg63,
+BenchmarkAg64,
+BenchmarkAg65,
+BenchmarkAg66,
+BenchmarkAg67,
+BenchmarkAg68,
+BenchmarkAg69,
+BenchmarkAg70,
+BenchmarkAg71,
+BenchmarkAg72,
+BenchmarkAg73,
+BenchmarkAg74,
+BenchmarkAg75,
+BenchmarkAg76,
+BenchmarkAg77,
+BenchmarkAg78,
+BenchmarkAg79,
+BenchmarkAg80,
+BenchmarkAg81,
+BenchmarkAg82,
+BenchmarkAg83,
+BenchmarkAg84,
+BenchmarkAg85,
+BenchmarkAg86,
+BenchmarkAg87,
+BenchmarkAg88,
+BenchmarkAg89,
+BenchmarkAg90,
+BenchmarkAg91,
+BenchmarkAg92,
+BenchmarkAg93,
+BenchmarkAg94,
+BenchmarkAg95,
+BenchmarkAg96,
+BenchmarkAg97,
+BenchmarkAg98,
+BenchmarkAg99,
+BenchmarkAg100
+  ]
+});
+</script>
+
+<template>
+  <div class="benchmark-container">
+    <h1>Benchmark Page</h1>
+    <div class="components-grid">
+      <BenchmarkAg1 />
+      <BenchmarkAg2 />
+      <BenchmarkAg3 />
+      <BenchmarkAg4 />
+      <BenchmarkAg5 />
+      <BenchmarkAg6 />
+      <BenchmarkAg7 />
+      <BenchmarkAg8 />
+      <BenchmarkAg9 />
+      <BenchmarkAg10 />
+      <BenchmarkAg11 />
+      <BenchmarkAg12 />
+      <BenchmarkAg13 />
+      <BenchmarkAg14 />
+      <BenchmarkAg15 />
+      <BenchmarkAg16 />
+      <BenchmarkAg17 />
+      <BenchmarkAg18 />
+      <BenchmarkAg19 />
+      <BenchmarkAg20 />
+      <BenchmarkAg21 />
+      <BenchmarkAg22 />
+      <BenchmarkAg23 />
+      <BenchmarkAg24 />
+      <BenchmarkAg25 />
+      <BenchmarkAg26 />
+      <BenchmarkAg27 />
+      <BenchmarkAg28 />
+      <BenchmarkAg29 />
+      <BenchmarkAg30 />
+      <BenchmarkAg31 />
+      <BenchmarkAg32 />
+      <BenchmarkAg33 />
+      <BenchmarkAg34 />
+      <BenchmarkAg35 />
+      <BenchmarkAg36 />
+      <BenchmarkAg37 />
+      <BenchmarkAg38 />
+      <BenchmarkAg39 />
+      <BenchmarkAg40 />
+      <BenchmarkAg41 />
+      <BenchmarkAg42 />
+      <BenchmarkAg43 />
+      <BenchmarkAg44 />
+      <BenchmarkAg45 />
+      <BenchmarkAg46 />
+      <BenchmarkAg47 />
+      <BenchmarkAg48 />
+      <BenchmarkAg49 />
+      <BenchmarkAg50 />
+      <BenchmarkAg51 />
+      <BenchmarkAg52 />
+      <BenchmarkAg53 />
+      <BenchmarkAg54 />
+      <BenchmarkAg55 />
+      <BenchmarkAg56 />
+      <BenchmarkAg57 />
+      <BenchmarkAg58 />
+      <BenchmarkAg59 />
+      <BenchmarkAg60 />
+      <BenchmarkAg61 />
+      <BenchmarkAg62 />
+      <BenchmarkAg63 />
+      <BenchmarkAg64 />
+      <BenchmarkAg65 />
+      <BenchmarkAg66 />
+      <BenchmarkAg67 />
+      <BenchmarkAg68 />
+      <BenchmarkAg69 />
+      <BenchmarkAg70 />
+      <BenchmarkAg71 />
+      <BenchmarkAg72 />
+      <BenchmarkAg73 />
+      <BenchmarkAg74 />
+      <BenchmarkAg75 />
+      <BenchmarkAg76 />
+      <BenchmarkAg77 />
+      <BenchmarkAg78 />
+      <BenchmarkAg79 />
+      <BenchmarkAg80 />
+      <BenchmarkAg81 />
+      <BenchmarkAg82 />
+      <BenchmarkAg83 />
+      <BenchmarkAg84 />
+      <BenchmarkAg85 />
+      <BenchmarkAg86 />
+      <BenchmarkAg87 />
+      <BenchmarkAg88 />
+      <BenchmarkAg89 />
+      <BenchmarkAg90 />
+      <BenchmarkAg91 />
+      <BenchmarkAg92 />
+      <BenchmarkAg93 />
+      <BenchmarkAg94 />
+      <BenchmarkAg95 />
+      <BenchmarkAg96 />
+      <BenchmarkAg97 />
+      <BenchmarkAg98 />
+      <BenchmarkAg99 />
+      <BenchmarkAg100 />
+    </div>
+  </div>
+</template>
+
+<style>
+  .benchmark-container {
+    padding: 2rem;
+  }
+
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+</style>

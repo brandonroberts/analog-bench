@@ -1,7 +1,8 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
+import { defineConfig } from 'vite';
+import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -11,7 +12,13 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog({ vite: { experimental: { supportAnalogFormat: true } } })],
+  plugins: [
+    analog({ vite: { experimental: { supportAnalogFormat: true } } }),
+    Inspect({
+      build: true,
+      outputDir: '.vite-inspect',
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',

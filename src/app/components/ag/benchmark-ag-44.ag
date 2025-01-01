@@ -1,0 +1,27 @@
+<script lang="ts">
+  import { signal } from '@angular/core';
+
+  const count44 = signal(0);
+
+  function increment44() {
+    count44.update((count) => count + 1);
+  }
+</script>
+
+<template>
+  <div class="benchmark-component">
+    <h3>Component 44</h3>
+    <button type="button" (click)="increment44()">
+      Count {{ count44() }}
+    </button>
+  </div>
+</template>
+
+<style>
+  .benchmark-component {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+</style>
