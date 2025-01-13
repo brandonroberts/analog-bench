@@ -2,26 +2,26 @@
 
 import angular from '@analogjs/vite-plugin-angular';
 import { defineConfig } from 'vite';
+import { minify } from "rollup-plugin-esbuild";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   build: {
     target: ['es2020'],
+    minify: false
   },
   resolve: {
     mainFields: ['module'],
   },
   plugins: [
     angular(),
+    minify({
+      minify: true,
+      legalComments: "none",
+      target: "es2022",
+    }) as any,
   ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['src/test-setup.ts'],
-    include: ['**/*.spec.ts'],
-    reporters: ['default'],
+  experimental: {
+    enableNativePlugin: true,
   },
-  define: {
-    'import.meta.vitest': mode !== 'production',
-  },
-}));
+});
