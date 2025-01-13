@@ -2,10 +2,9 @@
 
 import angular from '@analogjs/vite-plugin-angular';
 import { defineConfig } from 'vite';
-import Inspect from 'vite-plugin-inspect';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode, isSsrBuild }) => ({
+export default defineConfig(({ mode }) => ({
   build: {
     target: ['es2020'],
   },
@@ -14,10 +13,6 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
   },
   plugins: [
     angular(),
-    !isSsrBuild && Inspect({
-      build: true,
-      outputDir: '.vite-inspect',
-    }),
   ],
   test: {
     globals: true,
