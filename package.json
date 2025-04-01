@@ -57,9 +57,14 @@
     "tailwindcss": "^3.3.1",
     "tsx": "^4.19.2",
     "typescript": "~5.5.0",
-    "vite": "https://pkg.pr.new/rolldown/vite@a839caa",
+    "vite": "^6.2.4",
     "vite-plugin-inspect": "0.8.9",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^2.0.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@beta"
+    }
   }
 }
