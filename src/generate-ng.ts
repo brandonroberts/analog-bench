@@ -94,6 +94,7 @@ function generateRoutesFile(pages: number) {
   const pageContent = `import { Routes } from '@angular/router';
       
     export const routes: Routes = [
+      { path: '', redirectTo: '/1' },
       ${Array.from({ length: pages }, (_, i) => i + 1)
       .map(
         (i) =>
